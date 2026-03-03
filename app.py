@@ -8,7 +8,7 @@ from openai import OpenAI
 from moviepy.editor import VideoFileClip, concatenate_videoclips
 
 # 🚨 대표님의 진짜 API 키를 넣어주세요!
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 client = OpenAI()
 
 st.set_page_config(page_title="위드멤버 팩트후킹 V17", layout="wide")
@@ -143,4 +143,5 @@ if st.button("🚀 V17 맞춤형 기획 모드 가동!"):
             st.video("final_viral_output.mp4")
             st.subheader("🗣️ 40초 몰입형 대본 (Vrew용)")
             st.text_area("텍스트를 복사해서 활용하세요", strategy['script'], height=300)
+
             st.image(thumb_img, caption="AI 추천 고화질 썸네일")
