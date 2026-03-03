@@ -1,6 +1,5 @@
 streamlit
+openai
+moviepy==1.0.3
 opencv-python-headless
 numpy
-openai
-moviepy
-Pillow
